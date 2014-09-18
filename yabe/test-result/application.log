@@ -1,0 +1,5 @@
+18 Set 2014 15:51:41,966 INFO  ~ Starting /home/andreoliveira/ProjPlay/Treinamento/yabe
+18 Set 2014 15:51:42,554 WARN  ~ You're running Play! in DEV mode
+18 Set 2014 15:51:42,635 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+18 Set 2014 15:51:57,835 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+18 Set 2014 15:51:57,858 INFO  ~ Application 'Yet Another Blog Engine' is now started !
