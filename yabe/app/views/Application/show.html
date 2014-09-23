@@ -1,9 +1,15 @@
 #{extends 'main.html' /}
 #{set title:post.title /}
  
-#{if flash.success}
+	#{if flash.success}
     <p class="success">${flash.success}</p>
-#{/if}
+	#{/if}
+	
+	#{ifErrors}
+    <p class="error">
+        ${errors[0]}
+    </p>
+#{/ifErrors}
  
 #{display post:post, as:'full' /}
 
@@ -42,6 +48,13 @@
         <label for="content">Your message: </label>
         <textarea name="content" id="content">${params.content}</textarea>
     </p>
+    <p>
+    	<label for="code">Please type the code below: </label>
+    	<img src="@{Application.captcha(randomID)}" />
+    <br />
+    <input type="text" name="code" id="code" size="18" value="" />
+    <input type="hidden" name="randomID" value="${randomID}" />
+</p>
     <p>
         <input type="submit" value="Submit your comment" />
     </p>
